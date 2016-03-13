@@ -4,9 +4,9 @@ namespace euclid {
 	
 	class EuclidAlgorithm {
 		public static int GreatestCommonDivisor(int m, int n) {
-			// Require that both m and n be positive
-			if (m < 0 || n < 0) {
-				throw new ArgumentException ();
+			// Require that both m and n be positive and greater than 0
+			if (m <= 0 || n <= 0) {
+				throw new ArgumentException();
 			}
 
 			int r = m % n; // E1 pg2
@@ -14,7 +14,7 @@ namespace euclid {
 			if (r == 0) {
 				return n; // E2
 			} else {
-				return GreatestCommonDivisor (n, r); // E3
+				return GreatestCommonDivisor(n, r); // E3
 			}
 		}
 	}
