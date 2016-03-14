@@ -25,7 +25,12 @@ namespace euclid {
 
 			Console.Write(result);
 
-			int fail = EuclidAlgorithm.GreatestCommonDivisor(-3, 22);
+			try {
+				int fail = EuclidAlgorithm.GreatestCommonDivisor(-3, 22);
+				Console.WriteLine(fail);
+			} catch (ArgumentException e) {
+				Console.WriteLine("\nInvalid argument(s) for GreatestCommonDivider");
+			}
 		}
 	}
 }
